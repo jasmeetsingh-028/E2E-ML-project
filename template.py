@@ -39,12 +39,12 @@ list_of_files = [
 
 
 for filepath in list_of_files:
-    filepath = Path(filepath)
-    filedir, filename = os.path.split(filepath)
+    filepath = Path(filepath)  #converts to windows path
+    filedir, filename = os.path.split(filepath) #separating filename and dir
 
 
     if filedir !="":
-        os.makedirs(filedir, exist_ok=True)
+        os.makedirs(filedir, exist_ok=True) #create file dir if not exists
         logging.info(f"Creating directory; {filedir} for the file: {filename}")
 
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
