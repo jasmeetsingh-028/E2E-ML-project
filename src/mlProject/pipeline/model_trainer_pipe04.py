@@ -1,27 +1,27 @@
 from mlProject.config.configuration import ConfigurationManager
-from mlProject.components.data_validation_comp import DataValiadtion
+from mlProject.components.model_trainer_comp import ModelTrainer
 from mlProject import logger
 
 
-process = 'Data Validation'
+process = 'Model Triner'
 
-class DataValidationTrainingPipeline:
+class ModelTrainerTrainingPipeline:
     def __init__(self):
         pass
 
     def main(self):
         try:
             config = ConfigurationManager()
-            data_validation_config = config.get_data_validation_config()
-            data_validation = DataValiadtion(config=data_validation_config)
-            data_validation.validate_all_columns()
+            model_trainer_config = config.get_model_trainer_config()
+            model_trainer_config = ModelTrainer(config=model_trainer_config)
+            model_trainer_config.train()
         except Exception as e:
             raise e
-    
+
 if __name__ == '__main__':
     try:
         logger.info(f">>>>>> Process: {process} started <<<<<<")
-        obj = DataValidationTrainingPipeline()
+        obj = ModelTrainerTrainingPipeline()
         obj.main()
         logger.info(f">>>>>> Process: {process} completed <<<<<<\n\nx==========x")
     except Exception as e:
