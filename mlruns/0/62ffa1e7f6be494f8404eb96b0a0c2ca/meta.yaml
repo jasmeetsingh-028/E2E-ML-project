@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sjasm/Documents/E2E-ML-project/mlruns/0/62ffa1e7f6be494f8404eb96b0a0c2ca/artifacts
+end_time: 1698230467769
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 62ffa1e7f6be494f8404eb96b0a0c2ca
+run_name: omniscient-cub-27
+run_uuid: 62ffa1e7f6be494f8404eb96b0a0c2ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698230456725
+status: 3
+tags: []
+user_id: sjasm
